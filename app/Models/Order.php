@@ -11,6 +11,6 @@ class Order extends Model
 
     
     //Table name
-    protected $table = 'order';
+    protected $table = 'orderdetails';
     public $Order_Number = 'Order_Number';
 }
