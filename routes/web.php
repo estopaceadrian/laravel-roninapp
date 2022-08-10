@@ -18,11 +18,13 @@ Route::get('/item', 'App\Http\Controllers\Item@getProduct');
 Route::get('/helmet', 'App\Http\Controllers\Item@getHelmet');
 Route::get('/scooter', 'App\Http\Controllers\Item@getScooter');
 Route::get('/accessories', 'App\Http\Controllers\Item@getAccessories');
-Route::get('/customer', 'App\Http\Controllers\Customers@getCustomer');
-Route::get('/review', 'App\Http\Controllers\Reviews@getReview');
-Route::get('/quantity', 'App\Http\Controllers\Customers@getQuantity');
-Route::get('/rate', 'App\Http\Controllers\Reviews@getRate');
-Route::get('/orders', 'App\Http\Controllers\Orders@getOrders');
+// Route::get('/customer', 'App\Http\Controllers\Customers@getCustomer');
+// Route::get('/review', 'App\Http\Controllers\Reviews@getReview');
+// Route::get('/quantity', 'App\Http\Controllers\Customers@getQuantity');
+// Route::get('/rate', 'App\Http\Controllers\Reviews@getRate');
+
+Route::get('/cart', 'App\Http\Controllers\Cart@getCart');
+Route::post('/cart', 'App\Http\Controllers\Cart@postCart');
 
 
 
