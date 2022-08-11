@@ -40,6 +40,4 @@ class Cart extends Controller
         $cart->save();
         return response()->json($cart, 200);
     }
- 
-
 }
