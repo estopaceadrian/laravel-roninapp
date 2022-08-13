@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Login Controller
+$route='/auth' ;
+Route::post($route.'/login', 'App\Http\Controllers\LoginController@checkCredentials');
+Route::get($route.'/login', 'App\Http\Controllers\LoginController@getCredentials');
+ 
+$route='/order';
+Route::post($route.'/checkout', 'App\Http\Controllers\CheckoutController@placeOrder');
+Route::get($route.'/checkout', 'App\Http\Controllers\CheckoutController@getOrders');
 
 Route::get('/item', 'App\Http\Controllers\Item@getProduct');
 Route::get('/helmet', 'App\Http\Controllers\Item@getHelmet');
@@ -36,3 +44,6 @@ Route::get('/', 'App\Http\Controllers\Controller@helloWorld');
 $route = '/time';
 Route::get($route, 'App\Http\Controllers\TimeController@timeGetServerTime');
 Route::get($route.'/helloWorld', 'App\Http\Controllers\TimeController@timeHelloWorld');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
